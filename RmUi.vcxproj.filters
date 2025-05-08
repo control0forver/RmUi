@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{4f397839-2575-476a-bc15-564c1e3506a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{94a1c47d-31bf-4744-af3d-6e05eb078c9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Backends">
+      <UniqueIdentifier>{a64c27b8-899b-4973-935c-79cbe9c3a1e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Deps">
+      <UniqueIdentifier>{54af43d3-c722-45e3-81dd-4ec09450fc72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Deps\FreeType">
+      <UniqueIdentifier>{cc6b820e-c21f-486c-8084-8c003ba77dc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Backends">
+      <UniqueIdentifier>{6645ec5e-ee6e-44e1-9847-ce31b0bc90f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Primitives">
+      <UniqueIdentifier>{3d0fb6ca-0ed7-40ac-ab47-7da13161556f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Components">
+      <UniqueIdentifier>{af33fed7-a98d-4b49-85a7-37c44e8c4d27}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\RmUi\RmUi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Core\imconfig.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Core\imgui.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Core\imgui_internal.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Core\imstb_rectpack.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Core\imstb_textedit.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Core\imstb_truetype.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Core\Backends\imgui_impl_win32.h">
+      <Filter>Header Files\Core\Backends</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Core\Backends\imgui_impl_dx11.h">
+      <Filter>Header Files\Core\Backends</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Primitives\Ripple.hpp">
+      <Filter>Header Files\Primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Primitives\MouseState.hpp">
+      <Filter>Header Files\Primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Components\Button.hpp">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Components\BaseComponent.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Primitives\InteractionState.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Components\Interfaces\IRippleComponent.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Primitives\DrawInfo.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Components\Card.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Primitives\Elevation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Components\Interfaces\IElevationComponent.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Components\Interfaces\Base\InterfaceMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Infrastructure\IClassStructor.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RmUi\Utilities\ColorHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\RmUi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Build_LinkLibraries.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\Backends\imgui_impl_dx11.cpp">
+      <Filter>Source Files\Core\Backends</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\Backends\imgui_impl_win32.cpp">
+      <Filter>Source Files\Core\Backends</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\imgui.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\imgui_demo.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\imgui_draw.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\imgui_tables.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\imgui_widgets.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\Interfaces\IElevationComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utilities\ColorHelpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
