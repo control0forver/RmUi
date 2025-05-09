@@ -1,33 +1,33 @@
 # RmUi
 
-RmUi is a library designed for building user interfaces, leveraging the power of [Dear ImGui](https://github.com/ocornut/imgui) as its foundation. It provides a variety of components and utilities to simplify UI development.
+RmUi 是一个用于构建用户界面的库，支持多种组件和功能，并且使用 [Dear ImGui](https://github.com/ocornut/imgui) 作为基础。
 
-## Getting Started
+## 使用方法
 
-### Download RmUi and Dependencies
+### 下载 RmUi 以及安装依赖
 
-1. Visit the [RmUi Releases page](https://github.com/control0forver/RmUi/releases) to download the latest build.
-2. Choose the appropriate RmUi files for your needs:
-   - Binary libraries:
+1. 前往 [RmUi Releases 页面](https://github.com/control0forver/RmUi/releases) 下载最新版本的构建文件。
+2. 根据需要选择以下 RmUi 库文件：
+   - 二进制库：
      - `Debug_Win32.zip`
      - `Release_Win32.zip`
      - `Debug_x64.zip`
      - `Release_x64.zip`
-   - Header files:
+   - 头文件：
      - `Include.zip`
-3. Install the [DirectX SDK](https://learn.microsoft.com/windows/win32/directx-sdk--august-2009-).
+3. [安装 DirectX SDK](https://learn.microsoft.com/windows/win32/directx-sdk--august-2009-)。
 
-### Configure Your Project
+### 配置项目
 
-1. Extract the downloaded files.
-2. Add the `Include` folder to your project's include paths.
-3. Link the appropriate `RmUi.lib` file based on your target platform and configuration (Debug/Release, Win32/x64).
-4. Make sure the DirectX library directory is included in your linker settings.
-5. Use a C++ compiler that supports C++ 20 or later.
+1. 解压下载的文件。
+2. 将 `Include` 文件夹添加到项目的包含路径中。
+3. 根据目标平台和配置（Debug/Release, Win32/x64），将对应的 `RmUi.lib` 库文件添加到链接器输入中。
+4. 确保链接库目录中包含 DirectX 库。
+5. 使用 C++ 20 或更高版本的编译器。
 
-### Example Code
+### 示例代码
 
-Here is a simple example demonstrating how to use RmUi to create a button:
+以下是一个简单的示例，展示如何使用 RmUi 创建一个按钮：
 
 ```cpp
 // Use RmUi
@@ -82,7 +82,7 @@ static void DrawGUI() {
 
 int main() {
     InitUi();
-    
+
     auto uiExitCode = window.Run(DrawGUI, _T("RmUi Example"), 800, 600);
 
     std::cout << std::format("RmUi exit with code {}", uiExitCode) << std::endl;
@@ -105,19 +105,19 @@ bool DrawComponent(RmUi::Components::BaseComponent* component) {
 }
 ```
 
-## Building RmUi
+## 构建
 
-If you prefer to build RmUi yourself, follow these steps:
+如果需要自行构建 RmUi，可以使用以下步骤：
 
-1. Ensure the following tools are installed:
-   - Visual Studio 2022 or later
-   - MSBuild 17.0 or later
-   - DirectX SDK (June 2010) or later
-2. Clone the repository:
+1. 确保已安装以下工具：
+   - Visual Studio 2022 或更高版本
+   - MSBuild 17.0 或更高版本
+   - DirectX SDK (June 2010) 或更高版本
+2. 克隆项目代码：
    ```bash
    git clone https://github.com/control0forver/RmUi.git
    ```
-3. Navigate to the directory and build all configurations:
+3. 进入目录并使用以下命令构建所有配置：
    ```powershell
    cd RmUi
 
@@ -127,20 +127,20 @@ If you prefer to build RmUi yourself, follow these steps:
    msbuild RmUi.vcxproj /p:Configuration=Release /p:Platform=x64
    ```
 
-## Releases
+## 发布
 
-With every version tag (e.g., `v1.0.0`) pushed to the repository, GitHub Actions automatically builds and publishes the following:
+每次推送版本标签（如 `v1.0.0`）时，GitHub Actions 会自动构建并发布以下内容：
 
-- Binary libraries:
+- 二进制库：
   - Debug | Win32: `Debug_Win32.zip`
   - Release | Win32: `Release_Win32.zip`
   - Debug | x64: `Debug_x64.zip`
   - Release | x64: `Release_x64.zip`
-- Header files:
+- 头文件：
   - `Include.zip`
 
-For more details, refer to the [GitHub Actions Workflow](.github/workflows/Build_Release_on_version_tag_pushed.yml).
+详情请参阅 [GitHub Actions Workflow](.github/workflows/Build_Release_on_version_tag_pushed.yml)。
 
 ## README.md
- - English
- - [简体中文](README.zh-CN.md)
+ - [English](README.md)
+ - 简体中文
