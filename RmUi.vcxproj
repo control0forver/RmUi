@@ -52,7 +52,7 @@
     <ClCompile Include="Source\Core\imgui_draw.cpp" />
     <ClCompile Include="Source\Core\imgui_tables.cpp" />
     <ClCompile Include="Source\Core\imgui_widgets.cpp" />
-    <ClCompile Include="Source\Build_LinkLibraries.cpp" />
+    <ClCompile Include="Include\RmUi\Build_LinkLibraries.cpp" />
     <ClCompile Include="Source\RmUi.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

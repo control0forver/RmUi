@@ -110,7 +110,7 @@
     <ClCompile Include="Source\RmUi.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Build_LinkLibraries.cpp">
+    <ClCompile Include="Include\RmUi\Build_LinkLibraries.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\Core\Backends\imgui_impl_dx11.cpp">
