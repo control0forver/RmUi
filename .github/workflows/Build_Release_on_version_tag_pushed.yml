@@ -1,0 +1,71 @@
+name: Build and Release RmUi
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Set up MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Build All Configurations
+      run: |
+        # Debug|Win32 (Build)
+        msbuild RmUi.vcxproj /p:Configuration=Debug /p:Platform=Win32
+        # Release|Win32 (Build)
+        msbuild RmUi.vcxproj /p:Configuration=Release /p:Platform=Win32
+        # Debug|x64 (Build)
+        msbuild RmUi.vcxproj /p:Configuration=Debug /p:Platform=x64
+        # Release|x64 (Build)
+        msbuild RmUi.vcxproj /p:Configuration=Release /p:Platform=x64
+      shell: powershell
+
+    - name: Compress Build Outputs
+      run: |
+        # Debug|Win32 (Compressing Binary Files)
+        Compress-Archive -Path Build\bin\Win32\Debug\* -DestinationPath Debug_Win32.zip
+        # Release|Win32 (Compressing Binary Files)
+        Compress-Archive -Path Build\bin\Win32\Release\* -DestinationPath Release_Win32.zip
+        # Debug|x64 (Compressing Binary Files)
+        Compress-Archive -Path Build\bin\x64\Debug\* -DestinationPath Debug_x64.zip
+        # Release|x64 (Compressing Binary Files)
+        Compress-Archive -Path Build\bin\x64\Release\* -DestinationPath Release_x64.zip
+        
+        # (Compressing Header Files)
+        Compress-Archive -Path Include -DestinationPath Include.zip
+      shell: powershell
+
+    - name: Upload Build Artifacts to Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: |
+          Debug_Win32.zip
+          Release_Win32.zip
+          Debug_x64.zip
+          Release_x64.zip
+          Include.zip
+        token: ${{ secrets.GITHUB_TOKEN }}
+        tag: AutoBuild_Release_${{ github.ref_name }}  # Use the tag name which is last pushed
+        name: Release ${{ github.ref_name }}
+        body: |
+          Auto Builds for RmUi:
+          - Binary Libraries:
+            - Debug | Win32
+              - `Debug_Win32.zip`
+            - Release | Win32
+              - `Release_Win32.zip`
+            - Debug | x64
+              - `Debug_x64.zip`
+            - Release | x64
+              - `Release_x64.zip`
+          - Header Files
+            - `Include.zip`
